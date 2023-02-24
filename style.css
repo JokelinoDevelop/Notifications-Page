@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--light-grayish-blue-1);
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.container{
+    padding: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+@media (min-width: 1000px){
+
+    body{
+        display: grid;
+        place-content: center;
+    }
+
+    .container{
+        max-width: 750px;
+    }
+}
+
+/* Notifications Header */
+
+.container .notifications-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .notifications-header .left-side{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container .notifications-header .left-side p{
+    font-weight: 800;
+    background-color: var(--blue);
+    color: #fff;
+    padding: 0.1rem 0.7rem;
+    border-radius: 5px;
+}
+
+.container .notifications-header .right-side p{
+    color: var(--grayish-blue);
+}
+
+/* Notifications Content */
+
+.container .content{
+    margin-top: 1rem;
+}
+
+.container .content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.container .content ul li{
+    display: flex;
+    padding: 1rem;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.container .content ul .item-space-between{
+    justify-content: space-between;
+}
+
+.container .content ul li .wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container .content ul .active{
+    background-color: var(--very-light-grayish-blue);
+}
+
+.container .content ul li img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.container .content ul li .chess{
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+@media (min-width: 1000px){
+    .container .content ul li .chess{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.container .content ul li .chess:hover{
+    border: 3px solid gray;
+    transition: all 0.3 ease-in;
+}
+
+    
+
+
+.container .content ul li .text{
+    font-size: 0.9rem;
+}
+
+.container .content ul li .text blockquote{
+    padding: 1rem;
+    border: 1px solid var(--grayish-blue);
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    color: var(--dark-grayish-blue);
+}
+
+.container .content ul li .text .text-p{
+    max-width: 25ch;
+    color: var(--grayish-blue);
+}
+
+@media (min-width: 1000px){
+    .container .content ul li .text .text-p{
+        max-width: 100%;
+        letter-spacing: 1px;
+    }
+}
+
+.container .content ul li .text .text-p span{
+    color: black;
+    font-weight: 800;
+}
+
+.container .content ul li .text .text-p .span-s{
+    font-weight: 500;
+}
+
+.container .content ul li .text .text-p .span-n{
+    font-weight: 800;
+    color: var(--dark-grayish-blue);
+}
+
+.container .notifications-header .right-side p:hover,
+.container .content ul li .text .text-p span:hover,
+.container .content ul li .text .text-p .span-s:hover,
+.container .content ul li .text .text-p .span-n:hover{
+    color: var(--blue);
+    transition: 0.3s ease-in;
+}
+
+.container .content ul li .text .time{
+    color: var(--grayish-blue);
+    margin-top: 0.1rem;
+}
+
